@@ -1,8 +1,8 @@
 examples:
 	$(MAKE) -C examples/
 
-tests:
-	$(MAKE) -C examples/ run
+test:
+	$(MAKE) -C examples/ test
 
 all: tests examples
 
