@@ -1,7 +1,7 @@
 # event-emitter
 > An event emitter implementation in C++, inspired by Node.js.
 
-[![Build Status](https://travis-ci.org/HQarroum/timed-cache.svg?branch=master)](https://travis-ci.org/HQarroum/event-emitter)
+[![Build Status](https://travis-ci.org/HQarroum/event-emitter.svg?branch=master)](https://travis-ci.org/HQarroum/event-emitter)
 ![Production ready](https://img.shields.io/badge/production-ready-brightgreen.svg)
 
 
