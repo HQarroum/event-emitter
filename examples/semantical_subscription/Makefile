@@ -1,4 +1,4 @@
-CC = g++
+CXX = g++
 
 APP_NAME = example
 
@@ -13,10 +13,10 @@ OBJ = $(SRC:.c=.o)
 assert = $(if $(filter whatever,${CROSS_COMPILE}),$(if ${VARIABLE},,$(error Urk! Variable problem)))
 
 %.o: %.c
-	$(CC) -o $@ -c $<
+	$(CXX) -o $@ -c $<
 
 all: $(OBJ)
-	$(CC) $(CFLAGS) -o $(APP_NAME) $^
+	$(CXX) $(CFLAGS) -o $(APP_NAME) $^
 
 re: fclean all
 
