@@ -1,0 +1,8 @@
+A subscription to typed_subscription_t<std::string> has been added.
+A subscription to subscription_t<std::string> has been added.
+A subscription to event_t<std::string> has been added.
+A subscription to topic event.foo has been added.
+A subscription to foo_t has been added.
+Topic event.foo received value foo
+An event event.foo has been emitted.
+Received foo_t with foo - bar

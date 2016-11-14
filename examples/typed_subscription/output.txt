@@ -1,0 +1,2 @@
+Received message from topic.foo
+Received foo_t with foo - bar

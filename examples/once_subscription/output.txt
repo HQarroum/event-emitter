@@ -1,0 +1,5 @@
+Event of topic event.foo received with value 'foo'
+Event of topic event.foo received with value 'foo'
+Event of topic event.foo received with value 'bar'
+Event of topic event.foo received with value 'baz'
+Event of topic event.foo received with value 'qux'
