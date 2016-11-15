@@ -248,7 +248,7 @@ namespace event
     template <typename Type, typename Callable>
     typed_subscription_t<T> type_subscribe(Callable&& callback, type_t type)
     {
-      auto interceptor = [=] (const typed_event_t<T>& event) {
+      auto interceptor = [] (const typed_event_t<T>& event) {
         callback(*static_cast<const Type*>(event.value()));
       };
       auto subscription = typed_subscription_t<T>(*this, typeid(Type), ++m_id, type, interceptor);
@@ -356,8 +356,6 @@ namespace event
       return (*this);
     }
   };
-
-
 };
 
 #endif // EVENT_EMITTER_H
