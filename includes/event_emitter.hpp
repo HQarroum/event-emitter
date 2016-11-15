@@ -50,22 +50,6 @@ namespace event
     {}
 
     /**
-     * \brief Equality operator definition
-     */
-    bool operator==(const private_emitter_t<T>& emitter) const
-    {
-      return (this == &emitter);
-    }
-
-    /**
-     * \brief Inequality operator definition.
-     */
-    bool operator!=(const private_emitter_t<T>& emitter) const
-    {
-      return (!operator==(emitter));
-    }
-
-    /**
      * \brief Registers a callable object associated with the
      * given event name.
      * \param event the event name to associate `callback` with.
