@@ -44,22 +44,22 @@ This implementation makes it possible to subscribe to events represented by a st
 
 To subscribe to an event, you simply use the `.on` interface by passing as a first argument the name of the event you would like to subscribe to, and as a second a *callable* object.
 
-Every event listener takes a single parameter as an argument which is of type `const event::event_t<T>&` where `T` is the type you specify as a template argument when instantiating and `event::emitter_t` :
+Every event listener takes a single parameter as an argument which is of type `const event::event_t<T>&` where `T` is the type you specify as a template argument when instantiating an `event::emitter_t` :
 
 ```c++
 event::emitter_t<std::string> emitter;
 
 emitter.on("event.foo", [] (const event::event_t<std::string>& e) {
-  // Lambda called for every event `event.foo`.
+  // Lambda called for every `event.foo`.
 })
 .on("event.bar", [] (const event::event_t<std::string>& e) {
-  // Lambda called for every event `event.bar`.
+  // Lambda called for every `event.bar`.
 }))
 .emit("event.foo", "foo")
 .emit("event.bar", "bar");
 ```
 
-> Callable objects in C++11 includes lambdas functions, functors, free-functions and pointers to methods. Also note that it is possible to chain the calls to the methods exposed by the `emitter_t` instance.
+> Callable objects in C++11 includes lambda functions, functors, free-functions and pointers to methods. Also note that it is possible to chain the calls to the methods exposed by the `emitter_t` instance.
 
 #### Typed subscriptions
 
