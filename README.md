@@ -30,7 +30,7 @@ You need to call the `event::emitter_t` constructor by specifying a template par
 event::emitter_t<std::string> emitter;
 ```
 
-If you do not specifically want to transmit arguments across emitters and subscribers, you can pass an empty template parameter to the emitter :
+If you do not specifically want to transmit arguments across emitters and subscribers, you can omit the template parameter :
 
 ```c++
 event::emitter_t<> emitter;
@@ -59,7 +59,7 @@ emitter.on("event.foo", [] (const event::event_t<std::string>& e) {
 .emit("event.bar", "bar");
 ```
 
-> Callable objects in C++11 includes lambda functions, functors, free-functions and pointers to methods. Also note that it is possible to chain the calls to the methods exposed by the `emitter_t` instance.
+> Callable objects in C++11 includes lambda expressions, functors, free-functions and pointers to methods. Also note that it is possible to chain the calls to the methods exposed by the `emitter_t` instance.
 
 #### Typed subscriptions
 
@@ -101,7 +101,7 @@ To be notified when someone has subscribed to a particular event on the emitter,
 emitter.on<subscription_t<T>>([] (const subscription_t<T>& s) {
   // This is the callback associated with the subscription.
   auto& callable = s.function();
-  // This is the topic associated with the subscrition.
+  // This is the topic associated with the subscription.
   auto& topic = s.topic();
 });
 ```
@@ -114,7 +114,7 @@ To be notified when someone has subscribed to a typed event on the emitter, you 
 emitter.on<typed_subscription_t<T>>([] (const typed_subscription_t<T>& s) {
   // This is the callback associated with the subscription.
   auto& callable = s.function();
-  // This is the type associated with the subscription.
+  // This is the type index associated with the subscription.
   auto type = s.type_index();
 });
 ```
