@@ -104,7 +104,7 @@ namespace event
      * \brief Equality operator definition
      */
     bool operator==(const private_subscription_t<T, EventType>& subscription) const {
-      return (this->m_emitter == subscription.m_emitter
+      return (&(this->m_emitter) == &(subscription.m_emitter)
 	      && this->m_identifier == subscription.m_identifier);
     }
 
@@ -168,7 +168,7 @@ namespace event
     {}
 
     /**
-     * \return the event the subscription is associated with
+     * \return the type index of the associated type.
      */
     std::type_index type_index() const {
       return (m_type_index);
