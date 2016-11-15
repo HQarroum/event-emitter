@@ -34,12 +34,12 @@ struct structure
 };
 
 /**
- * \brief Definition of a method pointer to `method` member of `stucture`.
+ * \brief Definition of a pointer to a member function of `structure`.
  */
 void (structure::*method_ptr)(const event::event_t<std::string>& e) const = &structure::method;
 
 /**
- * \brief A callback associated with a subscription.
+ * \brief A free-function associated with a subscription.
  */
 static void callback(const event::event_t<std::string>& e) {
   dump(e);
