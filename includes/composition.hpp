@@ -73,7 +73,7 @@ namespace event {
     template <typename Type, typename Callable>
     typed_subscription_t<Arg> on(Callable&& callback)
     {
-      return (m_emitter.on<Type>(callback));
+      return (m_emitter.template on<Type>(callback));
     }
 
     /**
@@ -82,7 +82,7 @@ namespace event {
     template <typename Type, typename Callable>
     typed_subscription_t<Arg> once(Callable&& callback)
     {
-      return (m_emitter.once<Type>(callback));
+      return (m_emitter.template once<Type>(callback));
     }
 
     /**
@@ -99,7 +99,7 @@ namespace event {
     template <typename Type>
     private_emitter_t<Arg>& off(const typed_subscription_t<Arg>& subscription)
     {
-      return (m_emitter.off<Type>(subscription));
+      return (m_emitter.template off<Type>(subscription));
     }
 
     /**
@@ -121,7 +121,7 @@ namespace event {
     template <typename Type>
     private_emitter_t<Arg>& emit(const Type& obj)
     {
-      return (m_emitter.emit<Type>(obj));
+      return (m_emitter.template emit<Type>(obj));
     }
 
     /**
