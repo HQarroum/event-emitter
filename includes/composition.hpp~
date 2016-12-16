@@ -7,7 +7,7 @@ namespace event {
    * \brief Forward declaration of the `private_emitter_t` type.
    */
   template <typename T>
-  struct private_emitter_t;
+  class private_emitter_t;
 
   /**
    * \brief Forward declaration of the `emitter_t` type.
