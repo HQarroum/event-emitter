@@ -1,3 +1,10 @@
+<br><br>
+<p align="center">
+  <img width="200" src="assets/icon.png" alt="logo" />
+  <br />
+</p>
+<br>
+
 # event-emitter
 > An event emitter implementation in C++, inspired by Node.js.
 
